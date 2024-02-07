@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  sections: string[];
+}
+
+const Header: React.FC<HeaderProps> = ({ sections }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -32,48 +36,20 @@ const Header: React.FC = () => {
         </h1>
         <nav>
           <ul className="text-white flex space-x-4">
-            <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              <a href="#home">Home</a>
-            </li>
-            <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              {/* Replace the anchor tag with the Link component */}
-              <Link
-                to="education"
-                smooth={true}
-                duration={500}
-                offset={-50}
-                spy={true}
-                activeClass="active"
-              >
-                Education
-              </Link>
-            </li>
-            <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              {/* Replace the anchor tag with the Link component */}
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                offset={-50}
-                spy={true}
-                activeClass="active"
-              >
-                Projects
-              </Link>
-            </li>
-            <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              {/* Replace the anchor tag with the Link component */}
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                offset={-50}
-                spy={true}
-                activeClass="active"
-              >
-                Skills
-              </Link>
-            </li>
+            {sections.map((section, index) => (
+              <li key={index} className="hover:bg-slate-600 rounded-md px-2 py-1">
+                <Link
+                  to={section.toLowerCase()} // Use the lowercase version of the section as the id
+                  smooth={true}
+                  duration={500}
+                  offset={-50}
+                  spy={true}
+                  activeClass="active"
+                >
+                  {section}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

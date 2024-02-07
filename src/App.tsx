@@ -7,11 +7,14 @@ import Skills from "./components/Skills";
 import "./index.css";
 
 function App() {
+
+  const sections = ["Home", "Education", "Projects", "Skills"]
+  
   return (
     <>
     <div className="bg-gray-800 flex flex-col min-h-screen">
       <div className="flex-grow">
-        <Header />
+        <Header sections={sections} />
         <Bio />
         <EducationInfo />
         <Projects />
