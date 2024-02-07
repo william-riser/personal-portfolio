@@ -7,9 +7,9 @@ const EducationInfo: React.FC = () => {
   return (
     <div id="education"
       ref={ref}
-      className={`max-w-2xl mx-auto p-8 bg-white shadow-md rounded-md my-8 opacity-0 transform transition-opacity duration-300 ${
-        inView ? 'opacity-100 translate-y-0' : 'translate-y-10'
-      }`}
+      className={`max-w-2xl mx-auto p-8 bg-white shadow-md rounded-md my-8 ${
+        inView ? '' : 'translate-y-10'
+      } `}
     >
       <h2 className="text-4xl font-bold mb-4">Education</h2>
 
@@ -25,7 +25,6 @@ const EducationInfo: React.FC = () => {
           CS1800 - Discrete Structures
         </p>
       </div>
-
     </div>
   );
 };
