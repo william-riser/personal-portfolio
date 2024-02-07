@@ -1,5 +1,8 @@
 // src/components/Footer.tsx
 import React from "react";
+import githubwhite from "./public/images/githubwhite.png";
+import instagramlogo from "./public/images/instagramlogo.png";
+import linkedin from "./public/images/linkedin.png";
 
 const Footer: React.FC = () => {
   return (
@@ -11,17 +14,17 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="./public/images/linkedin.png" alt="LinkedIn" style={{ width: "24px", height: "24px" }} />
+          <img src={linkedin} alt="LinkedIn" style={{ width: "24px", height: "24px" }} />
         </a>
         <a
           href="https://www.instagram.com/william.riser/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="./public/images/instagramlogo.png" alt="Instagram" style={{ width: "24px", height: "24px" }} />
+          <img src={instagramlogo} alt="Instagram" style={{ width: "24px", height: "24px" }} />
         </a>
         <a href="https://github.com/william-riser" target="_blank" rel="noopener noreferrer">
-          <img src="./public/images/githubwhite.png" alt="GitHub" style={{ width: "24px", height: "24px" }} />
+          <img src={githubwhite} alt="GitHub" style={{ width: "24px", height: "24px" }} />
         </a>
       </section>
       <p className="text-center">
