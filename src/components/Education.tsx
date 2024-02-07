@@ -25,6 +25,8 @@ const EducationInfo: React.FC = () => {
           CS1800 - Discrete Structures
         </p>
       </div>
+
+      
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,13 +36,43 @@ const Header: React.FC = () => {
               <a href="#home">Home</a>
             </li>
             <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              <a href="#education">Education</a>
+              {/* Replace the anchor tag with the Link component */}
+              <Link
+                to="education"
+                smooth={true}
+                duration={500}
+                offset={-50}
+                spy={true}
+                activeClass="active"
+              >
+                Education
+              </Link>
             </li>
             <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              <a href="#skills">Skills</a>
+              {/* Replace the anchor tag with the Link component */}
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                offset={-50}
+                spy={true}
+                activeClass="active"
+              >
+                Projects
+              </Link>
             </li>
             <li className="hover:bg-slate-600 rounded-md px-2 py-1">
-              <a href="#projects">Projects</a>
+              {/* Replace the anchor tag with the Link component */}
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                offset={-50}
+                spy={true}
+                activeClass="active"
+              >
+                Skills
+              </Link>
             </li>
           </ul>
         </nav>

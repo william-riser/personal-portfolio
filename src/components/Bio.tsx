@@ -12,7 +12,7 @@ const BackgroundImage: React.FC = () => {
         <h1 className="text-3xl font-bold mb-4 text-center">About Me</h1>
         <p className="text-lg text-center">
           Welcome! I'm William Riser, a computer science student at Northeastern
-          University. I have a passion for coding and problem-solving, and I am
+          University. I have a passion for programming and problem-solving, and I am
           constantly seeking opportunities to expand my knowledge and skills in
           the field of computer science.
         </p>
