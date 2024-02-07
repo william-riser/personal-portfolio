@@ -1,8 +1,8 @@
 // src/components/Footer.tsx
 import React from "react";
-import githubwhite from "./public/images/githubwhite.png";
-import instagramlogo from "./public/images/instagramlogo.png";
-import linkedin from "./public/images/linkedin.png";
+import githubwhite from "/public/images/githubwhite.png";
+import instagramlogo from "/public/images/instagramlogo.png";
+import linkedin from "/public/images/linkedin.png";
 
 const Footer: React.FC = () => {
   return (

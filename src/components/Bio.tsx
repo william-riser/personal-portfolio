@@ -1,9 +1,10 @@
 import React from "react";
-import banner from "./public/images/banner.jpeg";
+import banner from "/public/images/banner.jpeg";
 
 const BackgroundImage: React.FC = () => {
   return (
-    <div id="home"
+    <div
+      id="home"
       className="bg-fixed bg-cover bg-center h-screen flex items-center justify-end"
       style={{ backgroundImage: `url(${banner})` }}
     >
