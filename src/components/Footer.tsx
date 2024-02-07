@@ -11,17 +11,17 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="./src/images/linkedin.png" alt="LinkedIn" style={{ width: "24px", height: "24px" }} />
+          <img src="./public/images/linkedin.png" alt="LinkedIn" style={{ width: "24px", height: "24px" }} />
         </a>
         <a
           href="https://www.instagram.com/william.riser/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="./src/images/instagramlogo.png" alt="Instagram" style={{ width: "24px", height: "24px" }} />
+          <img src="./public/images/instagramlogo.png" alt="Instagram" style={{ width: "24px", height: "24px" }} />
         </a>
         <a href="https://github.com/william-riser" target="_blank" rel="noopener noreferrer">
-          <img src="./src/images/githubwhite.png" alt="GitHub" style={{ width: "24px", height: "24px" }} />
+          <img src="./public/images/githubwhite.png" alt="GitHub" style={{ width: "24px", height: "24px" }} />
         </a>
       </section>
       <p className="text-center">

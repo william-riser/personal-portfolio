@@ -8,7 +8,7 @@ const EducationInfo: React.FC = () => {
     <div
       id="projects"
       ref={ref}
-      className={`max-w-2xl mx-auto p-8 bg-white shadow-md rounded-md my-8 opacity-0 transform transition-opacity duration-500 ${
+      className={`max-w-2xl mx-auto p-8 bg-white shadow-md rounded-md my-8 opacity-0 transform transition-opacity duration-300 ${
         inView ? "opacity-100 translate-y-0" : "translate-y-10"
       }`}
     >
