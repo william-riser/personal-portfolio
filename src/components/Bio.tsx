@@ -2,7 +2,7 @@ import React from "react";
 
 const BackgroundImage: React.FC = () => {
   return (
-    <div
+    <div id="home"
       className="bg-fixed bg-cover bg-center h-screen flex items-center justify-end"
       style={{ backgroundImage: "url('./src/images/banner.jpeg')" }}
     >

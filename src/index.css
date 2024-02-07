@@ -6,4 +6,24 @@
     .bg-sunset {
       background: linear-gradient(to right, #923993, #50D8D7);
     }
+    .bg-footer {
+      background: linear-gradient(0deg, rgba(101,115,135,1) 0%, rgba(31,41,55,1) 100%);
+    }
+    .fade-in-enter {
+      opacity: 0;
+    }
+    
+    .fade-in-enter-active {
+      opacity: 1;
+      transition: opacity 500ms;
+    }
+    
+    .fade-in-exit {
+      opacity: 1;
+    }
+    
+    .fade-in-exit-active {
+      opacity: 0;
+      transition: opacity 500ms;
+    }
   }
