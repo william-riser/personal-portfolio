@@ -9,6 +9,9 @@
     .bg-footer {
       background: linear-gradient(0deg, rgba(101,115,135,1) 0%, rgba(31,41,55,1) 100%);
     }
+    .bg-header{
+      background:linear-gradient(0deg, rgba(31, 41, 55, 1) 0%, rgb(47, 55, 65) 100%);
+    }
     .fade-in-enter {
       opacity: 0;
     }

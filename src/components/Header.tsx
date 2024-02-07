@@ -22,7 +22,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`z-10 fixed top-0 left-0 w-full py-4 transition-all duration-300 ${
-        isScrolled ? "bg-gray-800 opacity-0" : "bg-gray-800 opacity-100"
+        isScrolled ? "bg-gray-800 opacity-0" : "bg-header opacity-100"
       }`}
     >
       <div className="container mx-auto">
