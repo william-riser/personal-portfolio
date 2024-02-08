@@ -18,10 +18,11 @@ const EducationInfo: React.FC = () => {
         <h3 className="text-2xl font-bold">SnowJam</h3>
         <p className="text-gray-600 pl-2">December 2023</p>
         <p className="text-gray-600 text-xl">
-          A small game made for a game jam at Northeastern University. 
-          The game can be played at the following link: <a href="https://snowjam.asahoo.dev/">SnowJam</a>
+          A small game made for a game jam at Northeastern University. The game
+          can be played at the following link:{" "}
+          <a href="https://snowjam.asahoo.dev/">SnowJam</a>
         </p>
-        
+
         <h4 className="text-xl font-bold">Tools:</h4>
         <p className="text-gray-600 pl-4">
           Unity Game Engine <br />

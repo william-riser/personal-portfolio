@@ -7,6 +7,7 @@ import linkedin from "/public/images/linkedin.png";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-footer text-white p-4 text-center absolute w-full max-h-6em">
+      <p className="text-center">Contact Me:</p>
       <section className="flex justify-center space-x-4">
         <a
           className="link"
@@ -14,22 +15,35 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedin} alt="LinkedIn" style={{ width: "24px", height: "24px" }} />
+          <img
+            src={linkedin}
+            alt="LinkedIn"
+            style={{ width: "24px", height: "24px" }}
+          />
         </a>
         <a
           href="https://www.instagram.com/william.riser/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={instagramlogo} alt="Instagram" style={{ width: "24px", height: "24px" }} />
+          <img
+            src={instagramlogo}
+            alt="Instagram"
+            style={{ width: "24px", height: "24px" }}
+          />
         </a>
-        <a href="https://github.com/william-riser" target="_blank" rel="noopener noreferrer">
-          <img src={githubwhite} alt="GitHub" style={{ width: "24px", height: "24px" }} />
+        <a
+          href="https://github.com/william-riser"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={githubwhite}
+            alt="GitHub"
+            style={{ width: "24px", height: "24px" }}
+          />
         </a>
       </section>
-      <p className="text-center">
-        &copy; 2024 William Riser. All rights reserved.
-      </p>
     </footer>
   );
 };
