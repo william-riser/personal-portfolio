@@ -1,12 +1,10 @@
 import Bio from "./components/Bio";
 import EducationInfo from "./components/Education";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import GeminiPrompt from "./components/gemini";
 import "./index.css";
-
+import Header from "./components/Header";
 function App() {
   const sections = ["Home", "Education", "Projects", "Skills"];
 
@@ -19,7 +17,6 @@ function App() {
           <EducationInfo />
           <Projects />
           <Skills />
-          <GeminiPrompt />
         </div>
       </div>
       <div>
