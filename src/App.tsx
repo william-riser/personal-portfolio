@@ -1,12 +1,11 @@
 import Bio from "./components/Bio";
-import EducationInfo from "./components/Education";
+import Resume from "./components/Resume.tsx";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills";
 import "./index.css";
 import Header from "./components/Header";
 function App() {
-  const sections = ["Home", "Education", "Projects", "Skills"];
+  const sections = ["Home", "Resume", "Projects"];
 
   return (
     <>
@@ -14,9 +13,8 @@ function App() {
         <div className="flex-grow">
           <Header sections={sections} />
           <Bio />
-          <EducationInfo />
+          <Resume />
           <Projects />
-          <Skills />
         </div>
       </div>
       <div>

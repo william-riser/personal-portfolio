@@ -1,7 +1,6 @@
 // src/components/Footer.tsx
 import React from "react";
 import githubwhite from "/public/images/githubwhite.png";
-import instagramlogo from "/public/images/instagramlogo.png";
 import linkedin from "/public/images/linkedin.png";
 
 const Footer: React.FC = () => {
@@ -18,17 +17,6 @@ const Footer: React.FC = () => {
           <img
             src={linkedin}
             alt="LinkedIn"
-            style={{ width: "24px", height: "24px" }}
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/william.riser/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={instagramlogo}
-            alt="Instagram"
             style={{ width: "24px", height: "24px" }}
           />
         </a>
