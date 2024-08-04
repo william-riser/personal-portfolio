@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
       link: "https://github.com/william-riser/LinguaLink",
     },
     {
-      name: "EasyClassPlanner.com",
+      name: "EasyClassPlanner",
         description:
             "EasyClassPlanner is a web application that allows students to plan their class schedules. It uses recursive backtracking to optimize schedules based on user preferences.",
         tech: ["React", "TypeScript", "Rust"],
