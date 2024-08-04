@@ -10,22 +10,22 @@ const Projects: React.FC = () => {
       description:
           "This was made for the X Developer Challenge. X Finance is a tool that uses X API v2 and the X.ai API to analyze real-time tweet data and generate a summary of a stock's performance and public consensus. The front end is built using React and Tailwind, and the back end uses Python Flask. When a user searches for a stock, a request is sent to the Flask server, which uses the X API to query ~5000 relevant tweets. These tweets along with price data for the stock are sent to the X.ai API, which generates a brief trend summary for the user.",
       tech: ["React", "TypeScript", "Tailwind", "Python", "Flask"],
-      github: "https://github.com/william-riser/XDevChallenge",
+      link: "https://github.com/william-riser/XDevChallenge",
     },
     {
       name: "Lingua Link",
       description:
           "LinguaLink is a language learning platform that allows users to connect from all over the world and converse with each other via text and video call. It also gives users the option to sharpen their skills via AI chat.",
       tech: ["React", "Tailwind", "WebRTC", "Firebase"],
-      github: "https://github.com/william-riser/LinguaLink",
+      link: "https://github.com/william-riser/LinguaLink",
     },
     {
-      name: "williamriser.com",
-      description:
-          "This is my personal website to display my projects and resume. It is built using React and Tailwind CSS.",
-      tech: ["React", "Tailwind"],
-      github: "https://github.com/william-riser/personal-portfolio",
-    },
+      name: "EasyClassPlanner.com",
+        description:
+            "EasyClassPlanner is a web application that allows students to plan their class schedules. It uses recursive backtracking to optimize schedules based on user preferences.",
+        tech: ["React", "TypeScript", "Rust"],
+        link: "https://easyclassplanner.com",
+    }
   ];
 
   return (
@@ -56,10 +56,10 @@ const Projects: React.FC = () => {
                       ))}
                     </div>
                     <a
-                        href={project.github}
+                        href={project.link}
                         className="block mt-4 text-sm md:text-base bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
                     >
-                      GitHub
+                      View Project
                     </a>
                   </div>
               ))}

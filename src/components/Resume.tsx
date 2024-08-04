@@ -1,5 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { languages, technologies, tools } from "../assets/tech.ts";
 
 const Resume: React.FC = () => {
   const [ref, inView] = useInView({ threshold: 0.2 });
@@ -11,11 +12,7 @@ const Resume: React.FC = () => {
     "Mathematics of Data Models",
   ];
 
-  const languages = ["Java", "JavaScript", "Kotlin", "TypeScript", "SQL"];
 
-  const technologies = ["React", "Node.js", "Express", "TailwindCSS", "SQLite"];
-
-  const tools = ["Git", "GitHub", "VSCode", "IntelliJ IDEA"];
 
   return (
       <div className="flex justify-center">
@@ -52,8 +49,15 @@ const Resume: React.FC = () => {
                   <h4 className="text-lg md:text-xl font-medium mb-2">Languages:</h4>
                   <div className="flex flex-wrap">
                     {languages.map((language) => (
-                        <span key={language} className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
-                      {language}
+                        <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm gap-2">
+                      <div className={"flex items-center"}>
+                        <img
+                            src={language.icon}
+                            alt={language.name}
+                            className="w-5 h-5 mr-1 rounded-md bg-white"
+                            />
+                        {language.name}
+                        </div>
                     </span>
                     ))}
                   </div>
@@ -63,8 +67,15 @@ const Resume: React.FC = () => {
                   <h4 className="text-lg md:text-xl font-medium mb-2">Technologies:</h4>
                   <div className="flex flex-wrap">
                     {technologies.map((technology) => (
-                        <span key={technology} className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
-                      {technology}
+                        <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
+                          <div className={"flex items-center"}>
+                      <img
+                          src={technology.icon}
+                          alt={technology.name}
+                          className="w-5 h-5 mr-1 rounded-md bg-white"
+                      />
+                          {technology.name}
+                          </div>
                     </span>
                     ))}
                   </div>
@@ -74,8 +85,15 @@ const Resume: React.FC = () => {
                   <h4 className="text-lg md:text-xl font-medium mb-2">Tools:</h4>
                   <div className="flex flex-wrap">
                     {tools.map((tool) => (
-                        <span key={tool} className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
-                      {tool}
+                        <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
+                          <div className={"flex items-center"}>
+                      <img
+                          src={tool.icon}
+                          alt={tool.name}
+                          className="w-5 h-5 mr-1 rounded-md bg-white"
+                      />
+                          {tool.name}
+                          </div>
                     </span>
                     ))}
                   </div>
