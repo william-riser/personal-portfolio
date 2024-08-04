@@ -51,11 +51,11 @@ const Resume: React.FC = () => {
                     {languages.map((language) => (
                         <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm gap-2">
                       <div className={"flex items-center"}>
-                        <img
-                            src={language.icon}
-                            alt={language.name}
-                            className="w-5 h-5 mr-1 rounded-md bg-white"
-                            />
+                        {/*<img*/}
+                        {/*    src={language.icon}*/}
+                        {/*    alt={language.name}*/}
+                        {/*    className="w-5 h-5 mr-1 rounded-md bg-white"*/}
+                        {/*    />*/}
                         {language.name}
                         </div>
                     </span>
@@ -69,11 +69,11 @@ const Resume: React.FC = () => {
                     {technologies.map((technology) => (
                         <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
                           <div className={"flex items-center"}>
-                      <img
-                          src={technology.icon}
-                          alt={technology.name}
-                          className="w-5 h-5 mr-1 rounded-md bg-white"
-                      />
+                      {/*<img*/}
+                      {/*    src={technology.icon}*/}
+                      {/*    alt={technology.name}*/}
+                      {/*    className="w-5 h-5 mr-1 rounded-md bg-white"*/}
+                      {/*/>*/}
                           {technology.name}
                           </div>
                     </span>
@@ -87,11 +87,11 @@ const Resume: React.FC = () => {
                     {tools.map((tool) => (
                         <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
                           <div className={"flex items-center"}>
-                      <img
-                          src={tool.icon}
-                          alt={tool.name}
-                          className="w-5 h-5 mr-1 rounded-md bg-white"
-                      />
+                      {/*<img*/}
+                      {/*    src={tool.icon}*/}
+                      {/*    alt={tool.name}*/}
+                      {/*    className="w-5 h-5 mr-1 rounded-md bg-white"*/}
+                      {/*/>*/}
                           {tool.name}
                           </div>
                     </span>
