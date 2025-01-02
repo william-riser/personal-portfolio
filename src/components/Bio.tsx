@@ -14,10 +14,7 @@ const BackgroundImage: React.FC = () => {
             {/* Adjust max-width and width for responsiveness */}
             <h1 className="text-3xl md:text-4xl font-bold mb-4">About Me</h1>
             <p className="text-base md:text-lg">
-              Welcome! I'm William Riser, a computer science student at
-              Northeastern University. I have a passion for programming and
-              problem-solving, and I am constantly seeking opportunities to expand
-              my knowledge and skills in the field of computer science.
+            I'm William, a sophomore studying computer science at Northeastern University with hands-on experience in web development, Java, Python, and various other programming languages and tools. I've had the opportunity to work in collaborative settings, participating in multiple hackathons and engaging in side projects that deepen my technical skills and teamwork abilities.
             </p>
           </div>
         </div>
