@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
       description:
         "A tool that analyzes real-time tweet data to generate summaries of stock performance and public consensus using the X API and X.ai API. Built with React, Tailwind, and Flask.",
       tech: ["React", "TypeScript", "Tailwind", "Python", "Flask"],
-      link: "https://github.com/william-riser/XDevChallenge",
+      link: "https://github.com/anish-sahoo/XDevChallenge",
     },
     {
       name: "Lingua Link",
