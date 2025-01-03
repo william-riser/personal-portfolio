@@ -46,6 +46,14 @@ const Landing: React.FC = () => {
           >
             Get in Touch
           </a>
+          <a
+            href="/public/docs/William_Riser_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
+          >
+            View Resume
+          </a>
         </div>
       </div>
     </section>
