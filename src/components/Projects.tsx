@@ -39,8 +39,8 @@ const Projects: React.FC = () => {
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div className="max-w-6xl w-full text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
+      <div className="max-w-6xl w-full">
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
           My Projects
         </h2>
         <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                className="inline-block  bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
               >
                 View Project
               </a>

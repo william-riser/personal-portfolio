@@ -1,6 +1,13 @@
 import profile from "/public/images/profile.jpg";
 
 const Landing: React.FC = () => {
+
+  const redirect = (url: string) => {
+    return () => {
+      window.open(url, "_blank");
+    };
+  };
+
   return (
     <section
       id="home"
@@ -21,7 +28,7 @@ const Landing: React.FC = () => {
           <span className="font-semibold text-blue-500">
             Northeastern University
           </span>{" "}
-          with a concentration in <span className="text-blue-600">Artificial 
+          with a concentration in <span onClick={redirect(`https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-science/bscs/#ARIN`)} className="cursor-pointer text-blue-600">Artificial 
             Intelligence</span>.
           I love exploring new ideas at hackathons, working on
           fun side projects, and collaborating with teams.

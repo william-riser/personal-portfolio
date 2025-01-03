@@ -11,7 +11,7 @@ const GetInTouch: React.FC = () => {
     <section
       id="contact"
       ref={ref}
-      className={`min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 flex justify-center items-center py-16 px-4 md:px-8 transition-all duration-700 ${
+      className={` bg-gradient-to-b from-blue-50 to-gray-100 flex justify-center items-center py-16 px-4 md:px-8 transition-all duration-700 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
