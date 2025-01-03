@@ -1,16 +1,13 @@
-import Header from "../components/Header";
-import Home from "../components/Bio";
+import GetInTouch from "../components/GetInTouch";
 import Landing from "../components/landing";
+import Projects from "../components/Projects";
 
 const Website: React.FC = () => {
-
-    const sections = ["Home", "Resume", "Projects"];
-
   return (
     <>
-    <Header sections={sections} />
-    <Landing />
-    
+      <Landing />
+      <Projects />
+      <GetInTouch />
     </>
   );
 };

@@ -2,71 +2,86 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Projects: React.FC = () => {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   const projects = [
     {
       name: "X Finance",
       description:
-          "This was made for the X Developer Challenge. X Finance is a tool that uses X API v2 and the X.ai API to analyze real-time tweet data and generate a summary of a stock's performance and public consensus. The front end is built using React and Tailwind, and the back end uses Python Flask. When a user searches for a stock, a request is sent to the Flask server, which uses the X API to query ~5000 relevant tweets. These tweets along with price data for the stock are sent to the X.ai API, which generates a brief trend summary for the user.",
+        "A tool that analyzes real-time tweet data to generate summaries of stock performance and public consensus using the X API and X.ai API. Built with React, Tailwind, and Flask.",
       tech: ["React", "TypeScript", "Tailwind", "Python", "Flask"],
       link: "https://github.com/william-riser/XDevChallenge",
     },
     {
       name: "Lingua Link",
       description:
-          "LinguaLink is a language learning platform that allows users to connect from all over the world and converse with each other via text and video call. It also gives users the option to sharpen their skills via AI chat.",
+        "A language learning platform connecting users worldwide through text and video calls, with AI chat options to sharpen language skills.",
       tech: ["React", "Tailwind", "WebRTC", "Firebase"],
       link: "https://github.com/william-riser/LinguaLink",
     },
     {
       name: "EasyClassPlanner",
-        description:
-            "EasyClassPlanner is a web application that allows students to plan their class schedules. It uses recursive backtracking to optimize schedules based on user preferences.",
-        tech: ["React", "TypeScript", "Rust"],
-        link: "https://easyclassplanner.com",
-    }
+      description:
+        "A web app that helps students optimize their class schedules using recursive backtracking based on preferences.",
+      tech: ["React", "TypeScript", "Rust"],
+      link: "https://easyclassplanner.com",
+    },
   ];
 
   return (
-      <div className="flex justify-center">
-        <div
-            id="projects"
-            ref={ref}
-            className={`py-8 md:py-16 bg-gray-50 transition-transform duration-300 mt-4 mx-2 sm:mx-4 rounded-lg w-full sm:w-5/6 lg:w-4/5 ${
-                inView ? "lg:translate-y-0 lg:opacity-100" : "lg:translate-y-10 lg:opacity-0"
-            }`}
-        >
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Projects</h2>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project, index) => (
-                  <div key={index} className="p-4 bg-white rounded-lg shadow-md">
-                    <h2 className="text-xl md:text-2xl font-bold mb-2">{project.name}</h2>
-                    <p className="text-sm md:text-base mb-4">{project.description}</p>
-                    <div className="flex flex-wrap">
-                      <h2 className="text-sm md:text-base mr-2 mb-1">Tech Stack:</h2>
-                      {project.tech.map((tech, index) => (
-                          <span
-                              key={index}
-                              className="bg-gray-800 text-white text-xs md:text-sm px-2 py-1 rounded-md mr-2 mb-1"
-                          >
-                      {tech}
-                    </span>
-                      ))}
-                    </div>
-                    <a
-                        href={project.link}
-                        className="block mt-4 text-sm md:text-base bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      View Project
-                    </a>
-                  </div>
-              ))}
+    <section
+      id="projects"
+      ref={ref}
+      className={`min-h-screen bg-gradient-to-b from-gray-100 to-blue-50 flex flex-col justify-center items-center py-16 px-4 md:px-8 transition-all duration-700 ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
+      <div className="max-w-6xl w-full text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
+          My Projects
+        </h2>
+        <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          Here are some of my favorite projects that I've worked on. To see 
+          the full list, check out my GitHub!
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                {project.name}
+              </h3>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap mb-4 justify-center">
+                {project.tech.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-blue-600 text-white text-xs md:text-sm px-3 py-1 rounded-full mr-2 mb-2"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              >
+                View Project
+              </a>
             </div>
-          </div>
+          ))}
         </div>
       </div>
+    </section>
   );
 };
 
