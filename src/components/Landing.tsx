@@ -33,7 +33,7 @@ const Landing: React.FC = () => {
           I love exploring new ideas at hackathons, working on
           fun side projects, and collaborating with teams.
         </p>
-        <div className="space-x-4">
+        <div className="space-x-4 flex ">
           <a
             href="#projects"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200"
@@ -46,13 +46,11 @@ const Landing: React.FC = () => {
           >
             Get in Touch
           </a>
-          <a
-            href="/public/docs/William_Riser_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
+          <a 
+          href="#resume"
+          className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
           >
-            View Resume
+            Resume
           </a>
         </div>
       </div>

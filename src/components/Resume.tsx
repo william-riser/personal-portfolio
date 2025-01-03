@@ -6,103 +6,133 @@ const Resume: React.FC = () => {
   const [ref, inView] = useInView({ threshold: 0.2 });
 
   const courses = [
+    "Object-Oriented Design",
+    "Algorithms",
+    "Foundations of Cybersecurity",
     "Fundamentals of Computer Science 1 & 2",
     "Discrete Structures",
     "Database Design",
     "Mathematics of Data Models",
   ];
 
-
-
   return (
-      <div className="flex justify-center">
-        <div
-            id="resume"
-            ref={ref}
-            className={`py-8 md:py-16 bg-gray-50 transition-transform duration-300 mt-4 mx-2 sm:mx-4 rounded-lg w-full sm:w-5/6 lg:w-4/5 ${
-                inView ? "lg:translate-y-0 lg:opacity-100" : "lg:translate-y-10 lg:opacity-0"
-            }`}
-        >
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Resume</h2>
-            <div className="flex flex-col md:flex-row justify-center">
-              <div className="w-full md:w-1/2 px-2 md:px-4 mb-8">
-                <div className="mb-6">
-                  <h3 className="text-xl md:text-2xl font-medium mb-2">Northeastern University</h3>
-                  <p className="text-base md:text-lg text-gray-700">
-                    Bachelor of Science in Computer Science | 2027
-                  </p>
-                  <p className="text-sm text-gray-600">Boston, MA</p>
-                  <div className="mt-4">
-                    <h4 className="text-lg md:text-xl font-medium mb-2">Relevant Coursework:</h4>
-                    <ul className="list-disc list-inside text-gray-700">
-                      {courses.map((course) => (
-                          <li key={course}>{course}</li>
-                      ))}
-                    </ul>
+    <section
+      id="resume"
+      ref={ref}
+      className={`min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 py-16 px-4 md:px-8 transition-all duration-700 ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center flex-col mb-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 text-center mb-2">
+            Resume
+          </h2>
+          <a
+            href="/public/docs/William_Riser_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
+          >
+            Download Full Resume
+          </a>
+        </div>
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Education Section */}
+          <div className="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Northeastern University
+            </h3>
+            <p className="text-lg text-gray-600">
+              Bachelor of Science in Computer Science | <strong>2027</strong>
+            </p>
+            <p className="text-md text-gray-500 mb-2">
+              Concentration in Artificial Intelligence
+            </p>
+            <p className="text-sm text-gray-500">Boston, MA</p>
+            <div className="mt-6">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                Relevant Coursework
+              </h4>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                {courses.map((course) => (
+                  <li key={course}>{course}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Skills Section */}
+          <div className="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6 space-y-6">
+            {/* Languages */}
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                Languages
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {languages.map((language) => (
+                  <div
+                    key={language.name}
+                    className="flex items-center bg-gray-700 text-white px-3 py-2 rounded-lg"
+                  >
+                    <img
+                      src={language.icon || "https://via.placeholder.com/20"}
+                      alt={language.name}
+                      className="w-5 h-5 mr-2"
+                    />
+                    {language.name}
                   </div>
-                </div>
+                ))}
               </div>
+            </div>
 
-              <div className="w-full md:w-1/2 px-2 md:px-4 mb-8">
-                <div className="mb-6">
-                  <h4 className="text-lg md:text-xl font-medium mb-2">Languages:</h4>
-                  <div className="flex flex-wrap">
-                    {languages.map((language) => (
-                        <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm gap-2">
-                      <div className={"flex items-center"}>
-                        {/*<img*/}
-                        {/*    src={language.icon}*/}
-                        {/*    alt={language.name}*/}
-                        {/*    className="w-5 h-5 mr-1 rounded-md bg-white"*/}
-                        {/*    />*/}
-                        {language.name}
-                        </div>
-                    </span>
-                    ))}
+            {/* Technologies */}
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                Technologies
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {technologies.map((technology) => (
+                  <div
+                    key={technology.name}
+                    className="flex items-center bg-gray-700 text-white px-3 py-2 rounded-lg"
+                  >
+                    <img
+                      src={technology.icon || "https://via.placeholder.com/20"}
+                      alt={technology.name}
+                      className="w-5 h-5 mr-2"
+                    />
+                    {technology.name}
                   </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <div className="mb-6">
-                  <h4 className="text-lg md:text-xl font-medium mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap">
-                    {technologies.map((technology) => (
-                        <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
-                          <div className={"flex items-center"}>
-                      {/*<img*/}
-                      {/*    src={technology.icon}*/}
-                      {/*    alt={technology.name}*/}
-                      {/*    className="w-5 h-5 mr-1 rounded-md bg-white"*/}
-                      {/*/>*/}
-                          {technology.name}
-                          </div>
-                    </span>
-                    ))}
+            {/* Tools */}
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                Tools
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {tools.map((tool) => (
+                  <div
+                    key={tool.name}
+                    className="flex items-center bg-gray-700 text-white px-3 py-2 rounded-lg"
+                  >
+                    <img
+                      src={tool.icon || "https://via.placeholder.com/20"}
+                      alt={tool.name}
+                      className="w-5 h-5 mr-2"
+                    />
+                    {tool.name}
                   </div>
-                </div>
-
-                <div>
-                  <h4 className="text-lg md:text-xl font-medium mb-2">Tools:</h4>
-                  <div className="flex flex-wrap">
-                    {tools.map((tool) => (
-                        <span className="bg-gray-700 rounded-md p-1 m-1 text-white text-sm">
-                          <div className={"flex items-center"}>
-                      {/*<img*/}
-                      {/*    src={tool.icon}*/}
-                      {/*    alt={tool.name}*/}
-                      {/*    className="w-5 h-5 mr-1 rounded-md bg-white"*/}
-                      {/*/>*/}
-                          {tool.name}
-                          </div>
-                    </span>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
   );
 };
 

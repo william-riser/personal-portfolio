@@ -65,6 +65,10 @@ export const tools = [
         name: "GitHub",
         icon: "/public/images/githublogo.png"
     },
+    {
+        name: "LaTeX",
+        icon: "/public/images/latex_logo.jpg"
+    }
 
 ]
 
