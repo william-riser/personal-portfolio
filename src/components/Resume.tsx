@@ -75,11 +75,11 @@ const Resume: React.FC = () => {
                     key={language.name}
                     className="flex items-center bg-gray-700 text-white px-3 py-2 rounded-lg"
                   >
-                    <img
+                    {/* <img
                       src={language.icon || "https://via.placeholder.com/20"}
                       alt={language.name}
                       className="w-5 h-5 mr-2"
-                    />
+                    /> */}
                     {language.name}
                   </div>
                 ))}
@@ -97,11 +97,11 @@ const Resume: React.FC = () => {
                     key={technology.name}
                     className="flex items-center bg-gray-700 text-white px-3 py-2 rounded-lg"
                   >
-                    <img
+                    {/* <img
                       src={technology.icon || "https://via.placeholder.com/20"}
                       alt={technology.name}
                       className="w-5 h-5 mr-2"
-                    />
+                    /> */}
                     {technology.name}
                   </div>
                 ))}
@@ -119,11 +119,11 @@ const Resume: React.FC = () => {
                     key={tool.name}
                     className="flex items-center bg-gray-700 text-white px-3 py-2 rounded-lg"
                   >
-                    <img
+                    {/* <img
                       src={tool.icon || "https://via.placeholder.com/20"}
                       alt={tool.name}
                       className="w-5 h-5 mr-2"
-                    />
+                    /> */}
                     {tool.name}
                   </div>
                 ))}

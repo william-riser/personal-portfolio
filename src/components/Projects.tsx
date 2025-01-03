@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div className="max-w-6xl w-full">
+      <div className="max-w-6xl text-center w-full">
         <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
           My Projects
         </h2>
