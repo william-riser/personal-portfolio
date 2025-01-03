@@ -1,5 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import resume from "../assets/William_Riser_Resume.pdf";
 import { languages, technologies, tools } from "../assets/tech.ts";
 
 const Resume: React.FC = () => {
@@ -29,7 +30,7 @@ const Resume: React.FC = () => {
             Resume
           </h2>
           <a
-            href="/public/docs/William_Riser_Resume.pdf"
+            href={resume}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
