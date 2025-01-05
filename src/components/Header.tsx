@@ -61,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
                         offset={-50}
                         spy={true}
                         activeClass="active"
-                        className="block" // Add block for full-width on mobile
+                        className="block" // block for full-width on mobile
                         onClick={closeMenu} // Close menu on link click
                     >
                       {section}
