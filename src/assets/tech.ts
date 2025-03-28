@@ -70,6 +70,13 @@ export const technologies = [
     {
         name: "Flask",
     },
+    {
+        name: "Redis"
+    },
+    {
+        name: "MySQL"
+    },
+    
 
 ]
 

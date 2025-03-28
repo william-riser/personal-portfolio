@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
       name: "Carbon Foodprint",
       description: "A tool designed to gamify users' food choices by tracking their carbon footprint. Users can create profiles, add receipts, and view their carbon footprint score compared to others.",
       tech: ["MongoDB", "OpenAI API", "TypeScript", "React"],
-
+      link: "https://github.com/william-riser/yhack"
     }
   ];
 
