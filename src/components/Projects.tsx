@@ -11,8 +11,8 @@ const Projects: React.FC = () => {
     {
       name: "X Finance",
       description:
-        "A tool that analyzes real-time tweet data to generate summaries of stock performance and public consensus using the X API and X.ai API. Built with React, Tailwind, and Flask.",
-      tech: ["React", "TypeScript", "Tailwind", "Python", "Flask"],
+        "A tool that analyzes real-time tweet data to generate summaries of stock performance and public consensus using the X API and X.ai API. Built with React, Tailwind, and Flask. Made for the inaugural X Developer Challenge in San Francisco.",
+      tech: ["React", "TypeScript", "Tailwind", "Python", "Flask"], 
       link: "https://github.com/anish-sahoo/XDevChallenge",
     },
     {
@@ -29,6 +29,17 @@ const Projects: React.FC = () => {
       tech: ["React", "TypeScript", "Rust"],
       link: "https://easyclassplanner.com",
     },
+    {
+      name: "Three Trios",
+      description: "Turn based card game implemented using object oriented principles including MVC, command, callback. Wrote comprehensive JUnit tests with 100% coverage to ensure robust functionality and smooth integration.",
+      tech: ["Java", "JUnit", "Swing"],
+    },
+    {
+      name: "Basketball Scouting",
+      description: "Full-stack application allowing users to create profiles, search for basketball players, and view detailed player statistics. Implemented full CRUD operations for seamless database interaction and efficient profile management.",
+      tech: ["SQLite", "React", "Express", "Tailwind CSS"],
+      link: "https://github.com/william-riser/BasketballScouting",
+    }
   ];
 
   return (
@@ -43,10 +54,10 @@ const Projects: React.FC = () => {
         <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
           My Projects
         </h2>
-        <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+        {/* <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
           Here are some of my favorite projects that I've worked on. To see 
           the full list, check out my GitHub!
-        </p>
+        </p> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div

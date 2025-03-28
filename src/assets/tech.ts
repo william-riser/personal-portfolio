@@ -12,6 +12,10 @@ export const languages = [
         icon: "/public/images/java_logo.jpeg"
     },
     {
+        name: "Python",
+        icon: "/public/images/python_logo.png"
+    },
+    {
         name: "JavaScript",
         icon: "/public/images/js_logo.png"
     },
@@ -26,6 +30,12 @@ export const languages = [
     {
         name: "SQL",
         icon: "/public/images/sql_logo.jpeg"
+    },
+    {
+        name: "HTML"
+    },
+    {
+        name: "CSS"
     }
 ]
 
@@ -53,7 +63,14 @@ export const technologies = [
     {
         name: "MongoDB",
         icon: "/public/images/mongo_logo.png"
-    }
+    },
+    {
+        name: "JUnit"
+    },
+    {
+        name: "Flask",
+    },
+
 ]
 
 export const tools = [
@@ -68,6 +85,9 @@ export const tools = [
     {
         name: "LaTeX",
         icon: "/public/images/latex_logo.jpg"
+    },
+    {
+        name: "Docker"
     }
 
 ]

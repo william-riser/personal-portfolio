@@ -25,7 +25,7 @@ const Landing: React.FC = () => {
         />
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
           A second-year Computer Science student at{" "}
-          <span className="font-semibold text-blue-500">
+          <span onClick={redirect(`https://www.northeastern.edu/`)} className="font-semibold cursor-pointer text-blue-500">
             Northeastern University
           </span>{" "}
           with a concentration in <span onClick={redirect(`https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-science/bscs/#ARIN`)} className="cursor-pointer text-blue-600">Artificial 
@@ -40,17 +40,17 @@ const Landing: React.FC = () => {
           >
             See My Projects
           </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 bg-gray-300 text-gray-800 rounded-lg shadow-md hover:bg-gray-400 transition-colors duration-200"
-          >
-            Get in Touch
-          </a>
           <a 
           href="#resume"
           className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
           >
             Resume
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-3 bg-gray-300 text-gray-800 rounded-lg shadow-md hover:bg-gray-400 transition-colors duration-200"
+          >
+            Get in Touch
           </a>
         </div>
       </div>

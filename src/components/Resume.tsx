@@ -7,10 +7,12 @@ const Resume: React.FC = () => {
   const [ref, inView] = useInView({ threshold: 0.2 });
 
   const courses = [
+    "Machine Learning and Data Mining 1",
+    "Artificial Intelligence",
+    "Human-Computer Interaction",
     "Object-Oriented Design",
     "Algorithms",
     "Foundations of Cybersecurity",
-    "Fundamentals of Computer Science 1 & 2",
     "Discrete Structures",
     "Database Design",
     "Mathematics of Data Models",
