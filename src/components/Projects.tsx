@@ -1,3 +1,4 @@
+import { m } from "framer-motion";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -39,6 +40,12 @@ const Projects: React.FC = () => {
       description: "Full-stack application allowing users to create profiles, search for basketball players, and view detailed player statistics. Implemented full CRUD operations for seamless database interaction and efficient profile management.",
       tech: ["SQLite", "React", "Express", "Tailwind CSS"],
       link: "https://github.com/william-riser/BasketballScouting",
+    },
+    {
+      name: "Carbon Foodprint",
+      description: "A tool designed to gamify users' food choices by tracking their carbon footprint. Users can create profiles, add receipts, and view their carbon footprint score compared to others.",
+      tech: ["MongoDB", "OpenAI API", "TypeScript", "React"],
+
     }
   ];
 
