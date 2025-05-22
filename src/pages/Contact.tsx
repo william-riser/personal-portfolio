@@ -75,7 +75,7 @@ const ContactPage: React.FC = () => {
             href="mailto:riser.w@northeastern.edu"
             className="inline-block px-8 py-3.5 bg-wow-stone-dark text-wow-gold rounded-md shadow-lg border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-stone focus:outline-none focus:ring-2 focus:ring-wow-gold focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-base"
           >
-            Dispatch Email
+            Email Me
           </a>
         </div>
       </section>
