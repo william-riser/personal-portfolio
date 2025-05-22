@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import profile from "/public/images/profile.jpg";
 
-const Landing: React.FC = () => {
-
+const Home: React.FC = () => {
   const redirect = (url: string) => {
     return () => {
       window.open(url, "_blank");
@@ -9,10 +9,7 @@ const Landing: React.FC = () => {
   };
 
   return (
-    <section
-      id="home"
-      className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 flex justify-center items-center"
-    >
+    <section className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100 flex justify-center items-center">
       <div className="flex flex-col items-center text-center space-y-8 px-4">
         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800">
           Hey there, I'm
@@ -33,29 +30,29 @@ const Landing: React.FC = () => {
           I love exploring new ideas at hackathons, working on
           fun side projects, and collaborating with teams.
         </p>
-        <div className="space-x-4 flex ">
-          <a
-            href="#projects"
+        <div className="space-x-4 flex">
+          <Link
+            to="/projects"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200"
           >
             See My Projects
-          </a>
-          <a 
-          href="#resume"
-          className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
+          </Link>
+          <Link 
+            to="/resume"
+            className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-200"
           >
             Resume
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="px-6 py-3 bg-gray-300 text-gray-800 rounded-lg shadow-md hover:bg-gray-400 transition-colors duration-200"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default Landing;
+export default Home; 
