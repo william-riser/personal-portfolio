@@ -1,44 +1,52 @@
 import { Link } from 'react-router-dom';
 import { useInView } from "react-intersection-observer";
 
+
 const ContactPage: React.FC = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+    triggerOnce: true, 
+    threshold: 0.1,  
+  }); 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-gray-100">
-      <nav className="p-4">
-        <Link to="/" className="text-blue-600 hover:text-blue-800">
-          ← Back to Home
+    <div className="min-h-screen bg-wow-stone-texture bg-wow-stone-dark font-lora text-wow-parchment selection:bg-wow-gold selection:text-wow-stone-darker">
+      <nav className="p-4 fixed top-0 left-0 z-50 w-full bg-wow-stone-dark/80 backdrop-blur-sm shadow-lg border-b border-wow-gold-dark/30">
+        <Link
+          to="/"
+          className="text-wow-gold hover:text-wow-gold-light font-semibold transition-colors duration-200 flex items-center group text-sm md:text-base"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-200">
+            <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" />
+          </svg>
+          Back to Home Page
         </Link>
       </nav>
+
       <section
         ref={ref}
-        className={`flex justify-center items-center py-16 px-4 md:px-8 transition-all duration-700 ${
-          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        className={`min-h-screen flex flex-col items-center justify-center pt-20 pb-16 px-4 md:px-8 transition-all duration-1000 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
-        <div className="text-center max-w-xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+        <div className="bg-wow-stone-darker shadow-2xl rounded-lg p-8 md:p-12 max-w-2xl w-full border-4 border-wow-gold ring-2 ring-wow-gold-dark text-center">
+          <h2 className="text-4xl md:text-5xl font-medieval text-wow-gold-light mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)]">
             Get in Touch
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-8">
-            Feel free to connect with me or drop me an email. I'd love to hear
-            from you!
+          <p className="text-lg md:text-xl text-wow-parchment/90 mb-10 leading-relaxed">
+            Feel free to connect with me or send me an email! I'd love to hear from you!
           </p>
-          <div className="flex justify-center space-x-6 mb-8">
+
+          <div className="flex justify-center space-x-6 mb-10">
             <a
               href="https://linkedin.com/in/william-riser"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="text-blue-600 hover:text-blue-700 transition-colors duration-200 text-3xl"
+              className="p-3 bg-wow-stone-dark rounded-lg border-2 border-wow-gold-dark/70 hover:border-wow-gold text-wow-parchment hover:text-wow-gold-light transition-all duration-200 transform hover:scale-110 shadow-md hover:shadow-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8"
+                className="w-7 h-7 md:w-8 md:h-8" // Slightly larger icons
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -50,11 +58,11 @@ const ContactPage: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="text-blue-600 hover:text-blue-700 transition-colors duration-200 text-3xl"
+              className="p-3 bg-wow-stone-dark rounded-lg border-2 border-wow-gold-dark/70 hover:border-wow-gold text-wow-parchment hover:text-wow-gold-light transition-all duration-200 transform hover:scale-110 shadow-md hover:shadow-lg"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8"
+                className="w-7 h-7 md:w-8 md:h-8"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -62,11 +70,12 @@ const ContactPage: React.FC = () => {
               </svg>
             </a>
           </div>
+
           <a
             href="mailto:riser.w@northeastern.edu"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200"
+            className="inline-block px-8 py-3.5 bg-wow-stone-dark text-wow-gold rounded-md shadow-lg border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-stone focus:outline-none focus:ring-2 focus:ring-wow-gold focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-base"
           >
-            Email Me
+            Dispatch Email
           </a>
         </div>
       </section>
@@ -74,4 +83,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage; 
+export default ContactPage;

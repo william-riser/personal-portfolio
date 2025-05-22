@@ -34,3 +34,16 @@
     }
     
   }
+  
+/* Custom background class */
+.bg-wow-stone-texture {
+  background-image: url('/images/dark-stone-texture.png'); /* Adjust path if needed, relative to public folder */
+  background-repeat: repeat;
+  background-color: #1a1a1a; /* Fallback color if image doesn't load or while it's loading */
+}
+
+/* You might also want to set a default body text color if most of your pages are dark */
+body {
+  /* background-color: #1a1a1a; /* Or your main background texture if it's site-wide */
+  /* color: #e0e0e0; /* A light default text color */
+}
