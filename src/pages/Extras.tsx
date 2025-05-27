@@ -2,19 +2,26 @@ import { Link } from 'react-router-dom';
 import { useInView } from "react-intersection-observer";
 
 const currentTrack = {
-    songTitle: "The Actor", 
-    artistName: "Willow Avalon",          
-    albumArtUrl: "https://i.ytimg.com/vi/AK4ScSQcRAs/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgTyhHMA8=&rs=AOn4CLC2bsMorQN0WHvuwjRVUUQ3h9XAVg", 
-    songLink: "https://open.spotify.com/track/2Njx2qH5mUaKXHNvMeQeue?si=34b1ec1ca10d49e1", 
-  };
+    songTitle: "The Actor",
+    artistName: "Willow Avalon",
+    albumArtUrl: "https://i.ytimg.com/vi/AK4ScSQcRAs/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgTyhHMA8=&rs=AOn4CLC2bsMorQN0WHvuwjRVUUQ3h9XAVg",
+    songLink: "https://open.spotify.com/track/7n1PCfbmQuciMbNhWzItNN?si=f92c2726b464431c", 
+    albumName: "Southern Belle Raisin' Hell" 
+};
+
+const currentBook = {
+    bookTitle: "Mistborn: The Final Empire",
+    authorName: "Brandon Sanderson",
+    bookCoverUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg", 
+    bookLink: "https://www.goodreads.com/book/show/68428.Mistborn", 
+    seriesName: "The Mistborn Saga #1"  
+};
 
 const Extras: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.05,
   });
-
-
 
   return (
     <div className="min-h-screen bg-wow-stone-texture bg-wow-stone-dark font-lora text-wow-parchment selection:bg-wow-gold selection:text-wow-stone-darker">
@@ -38,40 +45,50 @@ const Extras: React.FC = () => {
       >
 
         {/* Important Links */}
-        <div className="max-w-md w-full bg-wow-stone-darker rounded-lg shadow-xl p-6 md:p-8 border-2 border-wow-gold-dark/70 text-center transform transition-all duration-300 hover:shadow-wow-gold/20 hover:border-wow-gold/70 mb-8">
+        <div className="max-w-md w-full bg-wow-stone-darker rounded-lg shadow-xl p-6 md:p-8 border-2 border-wow-gold-dark/70 text-center transform transition-all duration-300 hover:shadow-wow-gold/20 hover:border-wow-gold/70 mb-12">
           <h1 className="text-3xl md:text-4xl font-medieval text-wow-gold-light mb-8 drop-shadow-[0_2px_2px_rgba(0,0,0,0.7)]">
             Important Links
           </h1>
-          
-
-           <ul className="space-y-4 mt-6">
+          <ul className="space-y-4 mt-6">
             <li>
-              <a 
+              <a
                 href='https://bleacherreport.com/articles/2943390-the-surprisingly-compelling-goat-case-for-tim-duncan'
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-wow-stone-dark text-wow-gold rounded-md shadow-lg border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-stone transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-base"
+                className="inline-block px-6 py-3 bg-wow-stone text-wow-gold rounded-md shadow-lg border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-stone transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-base"
               >
                 Tim Duncan's Goat Case
               </a>
             </li>
+            <li>
+              <a
+                href='https://arxiv.org/pdf/1706.03762'
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-wow-stone text-wow-gold rounded-md shadow-lg border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-stone transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-base"
+              >
+                Attention is All You Need
+              </a>
+            </li>
           </ul>
         </div>
-        
-        {/* On Repeat */}
-        <div className="bg-wow-stone-darker rounded-lg shadow-xl p-6 md:p-8 border-2 border-wow-gold-dark/70 transform transition-all duration-300 hover:shadow-wow-gold/20 hover:border-wow-gold/70">
+
+        {/* Media Container */}
+        <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* On Repeat */}
+          <div className="bg-wow-stone-darker rounded-lg shadow-xl p-6 md:p-8 border-2 border-wow-gold-dark/70 transform transition-all duration-300 hover:shadow-wow-gold/20 hover:border-wow-gold/70 flex flex-col">
             <h3 className="text-2xl md:text-3xl font-medieval text-wow-gold-light mb-6 text-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
               Currently On Repeat
             </h3>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6">
-              <div className="flex-shrink-0">
-                <img 
-                  src={currentTrack.albumArtUrl} 
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 flex-grow">
+              <div className="flex-shrink-0 group">
+                <img
+                  src={currentTrack.albumArtUrl}
                   alt={`Album art for ${currentTrack.songTitle} by ${currentTrack.artistName}`}
                   className="w-32 h-32 sm:w-36 sm:h-36 rounded-md border-2 border-wow-gold-dark object-cover shadow-lg transition-transform duration-300 ease-out group-hover:scale-105"
                 />
               </div>
-              <div className="flex-grow text-center sm:text-left">
+              <div className="flex-grow text-center sm:text-left flex flex-col">
                 <h4 className="text-xl lg:text-2xl font-semibold text-wow-gold tracking-wide">
                   {currentTrack.songTitle}
                 </h4>
@@ -80,21 +97,64 @@ const Extras: React.FC = () => {
                 </p>
                 {currentTrack.albumName && (
                   <p className="text-sm text-wow-parchment/70 italic mt-1">
-                    From the album: {currentTrack.albumName}
+                    {currentTrack.albumName}
                   </p>
                 )}
-                <a 
-                  href={currentTrack.songLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 px-5 py-2.5 bg-wow-stone text-wow-gold rounded-md shadow-md border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-gold hover:text-wow-stone-dark transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-sm group"
-                >
-                  Spotify 
-                  <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
-                </a>
+                <div className="mt-auto pt-3">
+                  <a
+                    href={currentTrack.songLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 px-5 py-2.5 bg-wow-stone text-wow-gold rounded-md shadow-md border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-gold hover:text-wow-stone-dark transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-sm group"
+                  >
+                    Listen on Spotify
+                    <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Currently Reading */}
+          <div className="bg-wow-stone-darker rounded-lg shadow-xl p-6 md:p-8 border-2 border-wow-gold-dark/70 transform transition-all duration-300 hover:shadow-wow-gold/20 hover:border-wow-gold/70 flex flex-col">
+            <h3 className="text-2xl md:text-3xl font-medieval text-wow-gold-light mb-6 text-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+              Currently Reading
+            </h3>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 flex-grow">
+              <div className="flex-shrink-0 group">
+                <img
+                  src={currentBook.bookCoverUrl}
+                  alt={`Book cover for ${currentBook.bookTitle} by ${currentBook.authorName}`}
+                  className="w-32 h-32 sm:w-36 sm:h-36 rounded-md border-2 border-wow-gold-dark object-cover shadow-lg transition-transform duration-300 ease-out group-hover:scale-105"
+                />
+              </div>
+              <div className="flex-grow text-center sm:text-left flex flex-col">
+                <h4 className="text-xl lg:text-2xl font-semibold text-wow-gold tracking-wide">
+                  {currentBook.bookTitle}
+                </h4>
+                <p className="text-lg text-wow-parchment/90">
+                  {currentBook.authorName}
+                </p>
+                {currentBook.seriesName && (
+                  <p className="text-sm text-wow-parchment/70 italic mt-1">
+                    {currentBook.seriesName}
+                  </p>
+                )}
+                 <div className="mt-auto pt-3">
+                  <a
+                    href={currentBook.bookLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 px-5 py-2.5 bg-wow-stone text-wow-gold rounded-md shadow-md border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-gold hover:text-wow-stone-dark transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide text-sm group"
+                  >
+                    View on Goodreads
+                    <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </section>
     </div>
