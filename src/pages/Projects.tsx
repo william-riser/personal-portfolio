@@ -24,16 +24,22 @@ const ProjectsPage: React.FC = () => {
       link: "https://github.com/william-riser/LinguaLink",
     },
     {
+      name: "Three Trios",
+      description: "Turn based card game implemented using object oriented principles including MVC, command, callback. Wrote comprehensive JUnit tests with 100% coverage to ensure robust functionality and smooth integration.",
+      tech: ["Java", "JUnit", "Swing"],
+    },
+    {
+      name: "AI Breakout",
+      description: "A Deep Q-Learning (DQN) implementation for the classic Atari Breakout game, using RAM state representation.",
+      tech: ["Python", "PyTorch", "Gymnasium"],
+      link: "https://github.com/william-riser/ai-breakout",
+    },
+    {
       name: "EasyClassPlanner",
       description:
         "A web app that helps students optimize their class schedules using recursive backtracking based on preferences.",
       tech: ["React", "TypeScript", "Rust"],
       link: "https://easyclassplanner.com",
-    },
-    {
-      name: "Three Trios",
-      description: "Turn based card game implemented using object oriented principles including MVC, command, callback. Wrote comprehensive JUnit tests with 100% coverage to ensure robust functionality and smooth integration.",
-      tech: ["Java", "JUnit", "Swing"],
     },
     {
       name: "Basketball Scouting",

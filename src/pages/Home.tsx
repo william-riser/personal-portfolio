@@ -57,6 +57,12 @@ const Home: React.FC = () => {
             >
               Get in Touch
             </Link>
+            <Link
+              to="/extras"
+              className="px-6 py-3 bg-wow-stone-dark text-wow-gold rounded-md shadow-lg border-2 border-wow-gold-dark hover:border-wow-gold hover:bg-wow-stone transition-all duration-200 transform hover:scale-105 font-lora font-semibold tracking-wide"
+              >
+                Extras
+              </Link>
           </div>
         </div>
       </div>
