@@ -10,11 +10,12 @@ const currentTrack = {
 };
 
 const currentBook = {
-    bookTitle: "Mistborn: The Final Empire",
-    authorName: "Brandon Sanderson",
-    bookCoverUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg", 
-    bookLink: "https://www.goodreads.com/book/show/68428.Mistborn", 
-    seriesName: "The Mistborn Saga #1"  
+  bookTitle: "Our Woman in Moscow",
+  authorName: "Beatriz Williams",
+  bookCoverUrl:
+    "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615849126i/55200703.jpg",
+  bookLink: "https://www.goodreads.com/book/show/55200703-our-woman-in-moscow",
+  seriesName: "",
 };
 
 const Extras: React.FC = () => {
