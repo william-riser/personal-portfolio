@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useInView } from "react-intersection-observer";
-import resumePDF from "../assets/WilliamRiserResume.pdf"; 
+import resumePDF from "../../public/resume.pdf"; 
 import { languages, technologies, tools } from "../assets/tech.ts"; 
 
 
